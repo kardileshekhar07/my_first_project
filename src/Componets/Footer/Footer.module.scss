@@ -1,0 +1,11 @@
+@import "../../assests/scss/variable.scss";
+.footerSection {
+  height: 100px;
+  width: 100%;
+  background-color: orange;
+}
+.footerSection h3 {
+  text-align: center;
+  color: $color;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+@import "../../assests/scss/variable.scss";
+.headerSection {
+  height: 100px;
+  width: 100%;
+  background-color: purple;
+}
+.headerSection h3 {
+  text-align: center;
+  color: $color;
+  margin: 0;
+}

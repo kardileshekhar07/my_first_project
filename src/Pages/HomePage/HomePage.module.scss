@@ -1,0 +1,11 @@
+@import "../../assests/scss/variable.scss";
+.HomePage {
+  height: 500px;
+  width: 100%;
+  background-color: greenyellow;
+}
+.HomePage h3 {
+  text-align: center;
+  color: $color;
+  margin: 0;
+}
