@@ -1,14 +1,43 @@
 import style from "./Header.module.scss";
-
+import { useState } from "react";
 import miLogo from "../../assests/images/logo.png";
-const Header = ({ name }) => {
+
+const Header = () => {
+  const links = [
+    "Home",
+    "About Us",
+    "Courses",
+    "Gallery",
+    "Placement",
+    "Student Feedback",
+    "Blog",
+    "Contact Us",
+  ];
+
+  const [active, setActive] = useState("Home");
+
   return (
-    <>
-      <div className={style.headerSection}>
-        <h3> THIS IS THE {name[0].name}</h3>
-        <img src={miLogo} style={{ height: "70px", width: "200px" }} />
+    <header className={style.headerSection}>
+      <div className={style.logoSection}>
+        <img src={miLogo} alt="logo" />
       </div>
-    </>
+
+      <nav className={style.navbar}>
+        <ul>
+          {links.map((link) => (
+            <li key={link}>
+              <button
+                className={active === link ? style.active : ""}
+                onClick={() => setActive(link)}
+              >
+                {link}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
+
 export default Header;
